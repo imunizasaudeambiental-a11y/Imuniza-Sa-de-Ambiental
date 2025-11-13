@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Imuniza Saúde Ambiental — soluções em controle de pragas, limpeza e impermeabilização para ambientes saudáveis." />
+  <title>Imuniza Saúde Ambiental</title>
+
+  <style>
+    /* Base */
+    :root {
+      --brand: #007bff;
+      --brand-dark: #0056b3;
+      --bg: #f4f4f4;
+      --card: #ffffff;
+      --text: #222;
+      --muted: #666;
+    }
+
+    html,body {
+      height: 100%;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Skip link (visible on focus) */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: 8px 12px;
+      margin: 8px;
+      background: #000;
+      color: #fff;
+      z-index: 1000;
+      border-radius: 4px;
+    }
+
+    header {
+      background-color: var(--brand);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 4px 0;
+      font-size: 1.75rem;
+    }
+    header p { margin: 0; font-size: 1rem; opacity: .95; }
+
+    nav {
+      background-color: var(--brand-dark);
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 8px 12px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    nav a:focus,
+    nav a:hover {
+      background: rgba(255,255,255,0.08);
+      outline: 3px solid rgba(255,255,255,0.12);
+    }
+
+    main {
+      padding: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 32px;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-around;
+    }
+
+    .service {
+      background: var(--card);
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+      width: 250px;
+      padding: 18px;
+      text-align: center;
+      transition: transform .18s ease;
+    }
+    .service:hover { transform: translateY(-4px); }
+
+    .service-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      font-size: 32px;
+      border-radius: 50%;
+      border: none;
+      background: transparent;
+      color: var(--brand);
+      cursor: pointer;
+    }
+    .service-button:focus {
+      outline: 3px solid rgba(0,123,255,0.25);
+      border-radius: 50%;
+    }
+
+    .service h3 { margin: 12px 0 8px 0; font-size: 1.05rem; }
+    .service p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+    .feed {
+      background: var(--card);
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+      padding: 18px;
+    }
+    .feed-item {
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .feed-item:last-child { border-bottom: none; }
+    .feed-item h4 {
+      margin: 0 0 6px 0;
+      font-size: 1.05rem;
+    }
+    .feed-item p { margin: 0 0 6px 0; color: var(--muted); }
+    .feed-item time { color: var(--muted); font-size: .9rem; }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 22px 12px;
+      font-size: .95rem;
+    }
+
+    /* Utility - visually hidden */
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0 0 0 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .services { flex-direction: column; align-items: center; }
+      header h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <header role="banner">
+    <h1>Imuniza Saúde Ambiental</h1>
+    <p>Soluções em saúde e higiene ambiental para seu negócio</p>
+  </header>
+
+  <nav role="navigation" aria-label="Navegação principal">
+    <ul>
+      <li><a href="#home">Início</a></li>
+      <li><a href="#services">Serviços</a></li>
+      <li><a href="#feed">Feed</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" tabindex="-1" role="main">
+    <section id="home" aria-labelledby="home-title">
+      <h2 id="home-title">Bem-vindo à Imuniza Saúde Ambiental</h2>
+      <p>Especializados em controle de pragas, limpeza e impermeabilização, garantindo ambientes saudáveis e seguros.</p>
+    </section>
+
+    <section id="services" aria-labelledby="services-title">
+      <h2 id="services-title">Nossos Serviços</h2>
+      <div class="services">
+        <article class="service" aria-labelledby="svc1-title">
+          <button class="service-button" aria-expanded="false" aria-controls="svc1-desc" aria-label="Mais informações sobre Controle de Pragas" data-message="Saiba mais sobre Controle de Pragas: Eliminação eficaz de insetos e roedores com métodos seguros e ecológicos.">
+            <span aria-hidden="true">🐛</span>
+          </button>
+          <h3 id="svc1-title">Controle de Pragas</h3>
+          <p id="svc1-desc">Eliminação eficaz de insetos e roedores com métodos seguros e ecológicos.</p>
+        </article>
+
+        <article class="service" aria-labelledby="svc2-title">
+          <button class="service-button" aria-expanded="false" aria-controls="svc2-desc" aria-label="Mais informações sobre Limpeza de Reservatório" data-message="Saiba mais sobre Limpeza de Reservatório: Limpeza completa para garantir água potável e livre de contaminantes.">
+            <span aria-hidden="true">💧</span>
+          </button>
+          <h3 id="svc2-title">Limpeza de Reservatório</h3>
+          <p id="svc2-desc">Limpeza completa para garantir água potável e livre de contaminantes.</p>
+        </article>
+
+        <article class="service" aria-labelledby="svc3-title">
+          <button class="service-button" aria-expanded="false" aria-controls="svc3-desc" aria-label="Mais informações sobre Limpeza de Coifa Industrial" data-message="Saiba mais sobre Limpeza de Coifa Industrial: Manutenção de coifas para eficiência e segurança em ambientes industriais.">
+            <span aria-hidden="true">🔧</span>
+          </button>
+          <h3 id="svc3-title">Limpeza de Coifa Industrial</h3>
+          <p id="svc3-desc">Manutenção de coifas para eficiência e segurança em ambientes industriais.</p>
+        </article>
+
+        <article class="service" aria-labelledby="svc4-title">
+          <button class="service-button" aria-expanded="false" aria-controls="svc4-desc" aria-label="Mais informações sobre Impermeabilização de Reservatório" data-message="Saiba mais sobre Impermeabilização de Reservatório: Proteção contra vazamentos e infiltrações para longa durabilidade.">
+            <span aria-hidden="true">🛡️</span>
+          </button>
+          <h3 id="svc4-title">Impermeabilização de Reservatório</h3>
+          <p id="svc4-desc">Proteção contra vazamentos e infiltrações para longa durabilidade.</p>
+        </article>
+
+        <article class="service" aria-labelledby="svc5-title">
+          <button class="service-button" aria-expanded="false" aria-controls="svc5-desc" aria-label="Mais informações sobre Análise de Água" data-message="Saiba mais sobre Análise de Água: Testes laboratoriais para verificar qualidade e potabilidade da água.">
+            <span aria-hidden="true">🔬</span>
+          </button>
+          <h3 id="svc5-title">Análise de Água</h3>
+          <p id="svc5-desc">Testes laboratoriais para verificar qualidade e potabilidade da água.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="feed" aria-labelledby="feed-title">
+      <h2 id="feed-title">Feed de Notícias e Dicas</h2>
+      <div class="feed">
+        <article class="feed-item" aria-labelledby="f1-title">
+          <h4 id="f1-title">Importância do Controle de Pragas em Ambientes Comerciais</h4>
+          <p>Descubra como manter seu estabelecimento livre de pragas com nossas soluções eficazes. Saiba mais sobre prevenção e tratamento.</p>
+          <time datetime="2023-10-15">15/10/2023</time>
+        </article>
+
+        <article class="feed-item" aria-labelledby="f2-title">
+          <h4 id="f2-title">Dicas para Manter a Água Potável em Reservatórios</h4>
+          <p>Aprenda a importância da limpeza regular e impermeabilização para evitar contaminação. Nossos especialistas explicam passo a passo.</p>
+          <time datetime="2023-09-20">20/09/2023</time>
+        </article>
+
+        <article class="feed-item" aria-labelledby="f3-title">
+          <h4 id="f3-title">Benefícios da Limpeza de Coifas Industriais</h4>
+          <p>Reduza riscos de incêndios e melhore a eficiência energética com nossa limpeza profissional de coifas.</p>
+          <time datetime="2023-08-05">05/08/2023</time>
+        </article>
+
+        <article class="feed-item" aria-labelledby="f4-title">
+          <h4 id="f4-title">Análise de Água: O Que Você Precisa Saber</h4>
+          <p>Entenda os parâmetros de qualidade da água e como nossas análises ajudam a garantir saúde e segurança.</p>
+          <time datetime="2023-07-12">12/07/2023</time>
+        </article>
+
+        <article class="feed-item" aria-labelledby="f5-title">
+          <h4 id="f5-title">Impermeabilização: Proteja Seu Reservatório Contra Vazamentos</h4>
+          <p>Técnicas modernas para impermeabilizar reservatórios e evitar perdas de água e danos estruturais.</p>
+          <time datetime="2023-06-30">30/06/2023</time>
+        </article>
+
+        <article class="feed-item" aria-labelledby="f6-title">
+          <h4 id="f6-title">Casos de Sucesso: Clientes Satisfeitos com Nossos Serviços</h4>
+          <p>Veja depoimentos de empresas que confiaram na Imuniza Saúde Ambiental para soluções ambientais.</p>
+          <time datetime="2023-05-15">15/05/2023</time>
+        </article>
+
+        <article class="feed-item" aria-labelledby="f7-title">
+          <h4 id="f7-title">Ecologia e Sustentabilidade em Controle de Pragas</h4>
+          <p>Como utilizamos métodos ecológicos para um controle de pragas responsável com o meio ambiente.</p>
+          <time datetime="2023-04-20">20/04/2023</time>
+        </article>
+
+        <article class="feed-item" aria-labelledby="f8-title">
+          <h4 id="f8-title">Manutenção Preventiva para Ambientes Industriais</h4>
+          <p>Por que a limpeza regular de coifas e reservatórios é essencial para a produtividade e segurança.</p>
+          <time datetime="2023-03-10">10/03/2023</time>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Entre em Contato</h2>
+      <p>Telefone: <a href="tel:+5591982659863">(91) 98265-9863</a></p>
+      <p>E-mail: <a href="mailto:imunizasaudeambiental@gmail.com">imunizasaudeambiental@gmail.com</a></p>
+    </section>
+
+    <!-- Live region for announcing "saiba mais" messages to screen readers -->
+    <div id="sr-announcer" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2023 Imuniza Saúde Ambiental. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Small, accessible enhancement: when a service button is activated announce a "saiba mais"
+    (function(){
+      const announcer = document.getElementById('sr-announcer');
+      const buttons = document.querySelectorAll('.service-button');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const message = btn.getAttribute('data-message') || 'Saiba mais';
+          // toggle expanded state for ARIA
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          // announce to screen readers
+          if (announcer) {
+            announcer.textContent = message;
+            // Also show a temporary visual focus cue (optional)
+            btn.focus();
+          } else {
+            // fallback: alert for very old browsers (not recommended)
+            // alert(message);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
