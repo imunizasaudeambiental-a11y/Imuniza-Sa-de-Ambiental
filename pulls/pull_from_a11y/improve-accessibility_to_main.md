@@ -1,0 +1,3 @@
+PR Title: Melhoria de acessibilidade: elementos semânticos, aria e navegação por teclado
+
+PR Description: Esta PR aplica melhorias de acessibilidade e semântica ao arquivo index.html: uso de elementos semânticos (main, nav, article, time), substituição de handlers inline por botões nativos com aria-label e aria-expanded, adição de link 'Pular para o conteúdo', inclusão de uma região aria-live para anúncios, meta description e link tel:; recomendo executar auditoria com axe/Lighthouse e revisar contraste e textos alternativos se imagens forem adicionadas.
